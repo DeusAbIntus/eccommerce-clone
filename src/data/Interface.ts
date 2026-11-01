@@ -5,3 +5,13 @@ export interface ProductDataType {
   image: string;
   description: string;
 }
+
+export interface User {
+  email: string;
+  password: string;
+}
+
+export interface AuthReturnObjType {
+  success: boolean;
+  error?: string;
+}
