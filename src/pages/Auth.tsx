@@ -13,7 +13,7 @@ export default function Auth() {
   const [mode, setMode] = useState<string>("signup");
   const [error, setError] = useState<string | null>(null);
 
-  const { signUp, user, login, logout } = useAuth();
+  const { signUp, login } = useAuth();
 
   const navigate = useNavigate();
 
@@ -45,8 +45,6 @@ export default function Auth() {
     <div className="page">
       <div className="container">
         <div className="auth-container">
-          {user && <p>User logged in: {user.email}</p>}
-          <button onClick={() => logout()}>Log Out</button>
           <h1 className="page-title">
             {mode === "signup" ? "Sign Up" : "Login"}
           </h1>

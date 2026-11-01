@@ -78,3 +78,13 @@ const products: ProductDataType[] = [
 export function getProducts(): ProductDataType[] {
   return products;
 }
+
+export const getProductById = (id: string): ProductDataType | undefined => {
+  const productId = Number(id);
+
+  if (!Number.isInteger(productId)) {
+    return undefined;
+  }
+
+  return products.find((product) => product.id === productId);
+};
