@@ -15,3 +15,12 @@ export interface AuthReturnObjType {
   success: boolean;
   error?: string;
 }
+
+export interface CartItemType {
+  id: number;
+  quantity: number;
+}
+
+export interface CheckoutItemType extends CartItemType {
+  product: ProductDataType;
+}
